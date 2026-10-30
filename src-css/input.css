@@ -15,6 +15,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#main-content {
+  scroll-behavior: smooth;
+}
+
+/* Polished view transitions */
+@keyframes viewFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-view-fade {
+  animation: viewFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Skeleton Shimmer Pulse */
+@keyframes shimmerPulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.skeleton-shimmer {
+  animation: shimmerPulse 1.4s ease-in-out infinite;
+}
+
 /* High-Readability Legal Typography */
 .legal-text {
   font-family: var(--font-sans);
@@ -44,38 +78,42 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.25);
+  background: rgba(161, 161, 170, 0.25);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.45);
+  background: rgba(161, 161, 170, 0.45);
 }
 
 /* Search highlight mark */
 mark.search-highlight {
-  background-color: rgba(245, 158, 11, 0.25);
-  color: #fbbf24;
+  background-color: rgba(245, 158, 11, 0.22);
+  color: #d97706;
   padding: 0.1em 0.3em;
   border-radius: 0.25rem;
   font-weight: 600;
 }
+.dark mark.search-highlight {
+  background-color: rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+}
 
 /* Highlight targeted article on jump */
 .targeted-article {
-  animation: pulse-glow 2.5s ease-in-out forwards;
+  animation: pulse-glow 2.2s ease-in-out forwards;
 }
 
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.9), 0 0 25px rgba(99, 102, 241, 0.4);
-    border-color: rgba(99, 102, 241, 0.9);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.8), 0 0 20px rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.8);
   }
   70% {
-    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.6), 0 0 15px rgba(99, 102, 241, 0.2);
-    border-color: rgba(99, 102, 241, 0.6);
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.4), 0 0 10px rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.4);
   }
   100% {
     box-shadow: none;
-    border-color: rgba(51, 65, 85, 0.8);
+    border-color: rgba(63, 63, 70, 0.8);
   }
 }
