@@ -21,12 +21,6 @@
               500: '#6366f1',
               600: '#4f46e5',
               700: '#4338ca',
-            },
-            surface: {
-              DEFAULT: '#0b0f19',
-              card: '#111827',
-              border: '#1f293d',
-              hover: '#1a2337',
             }
           }
         }
@@ -34,7 +28,7 @@
     }
   </script>
 
-  <!-- Lucide Icons (Used for header and static UI only) -->
+  <!-- Lucide Icons (For static UI icons) -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- MiniSearch Full-Text Search Engine -->
@@ -83,10 +77,14 @@
 
       <!-- Right Controls -->
       <div class="flex items-center gap-2">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="p-2 text-slate-400 hover:text-slate-200 rounded-lg hover:bg-slate-800/60 transition-colors" title="Toggle theme">
-          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-          <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+        <!-- Bulletproof SVG Theme Toggle -->
+        <button id="theme-toggle" type="button" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800/80 transition-colors" title="Toggle theme">
+          <svg class="w-5 h-5 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+          </svg>
+          <svg class="w-5 h-5 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
         </button>
 
         <!-- GitHub Repo Link -->
@@ -140,7 +138,7 @@
       <!-- Loading Spinner -->
       <div id="loading-spinner" class="hidden py-24 flex flex-col items-center justify-center">
         <div class="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-        <p class="mt-4 text-sm text-slate-400">Loading legal text...</p>
+        <p class="mt-4 text-sm text-slate-400">Loading provisions...</p>
       </div>
 
       <!-- VIEW 1: HOME CATALOG VIEW -->
@@ -246,9 +244,31 @@
           </div>
         </div>
 
+        <!-- Top Pagination Controls -->
+        <div id="reader-pagination-top" class="hidden flex items-center justify-between bg-[#111827] border border-slate-800/80 rounded-xl px-4 py-3 text-xs text-slate-300 shadow-sm">
+          <button id="reader-prev-btn" class="px-3 py-1.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+            ← Previous
+          </button>
+          <span id="reader-page-info" class="font-medium text-slate-300"></span>
+          <button id="reader-next-btn" class="px-3 py-1.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+            Next →
+          </button>
+        </div>
+
         <!-- Articles Container -->
         <div id="reader-articles-container" class="space-y-5">
           <!-- Articles injected here with instant inline SVGs -->
+        </div>
+
+        <!-- Bottom Pagination Controls -->
+        <div id="reader-pagination-bottom" class="hidden flex items-center justify-between bg-[#111827] border border-slate-800/80 rounded-xl px-4 py-3 text-xs text-slate-300 shadow-sm">
+          <button id="reader-prev-btn-2" class="px-3 py-1.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+            ← Previous
+          </button>
+          <span id="reader-page-info-2" class="font-medium text-slate-300"></span>
+          <button id="reader-next-btn-2" class="px-3 py-1.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+            Next →
+          </button>
         </div>
 
       </section>
