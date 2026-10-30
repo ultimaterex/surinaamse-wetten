@@ -23,7 +23,7 @@ body {
 @keyframes viewFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(4px);
   }
   100% {
     opacity: 1;
@@ -32,16 +32,16 @@ body {
 }
 
 .animate-view-fade {
-  animation: viewFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: viewFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Skeleton Shimmer Pulse */
 @keyframes shimmerPulse {
   0%, 100% {
-    opacity: 0.45;
+    opacity: 0.4;
   }
   50% {
-    opacity: 0.85;
+    opacity: 0.8;
   }
 }
 
@@ -87,8 +87,8 @@ body {
 
 /* Search highlight mark */
 mark.search-highlight {
-  background-color: rgba(245, 158, 11, 0.22);
-  color: #d97706;
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #b45309;
   padding: 0.1em 0.3em;
   border-radius: 0.25rem;
   font-weight: 600;
@@ -105,15 +105,26 @@ mark.search-highlight {
 
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.8), 0 0 20px rgba(245, 158, 11, 0.3);
-    border-color: rgba(245, 158, 11, 0.8);
+    box-shadow: 0 0 0 3px rgba(161, 161, 170, 0.6), 0 0 15px rgba(161, 161, 170, 0.2);
+    border-color: rgba(161, 161, 170, 0.8);
   }
   70% {
-    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.4), 0 0 10px rgba(245, 158, 11, 0.15);
-    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 0 2px rgba(161, 161, 170, 0.3), 0 0 8px rgba(161, 161, 170, 0.1);
+    border-color: rgba(161, 161, 170, 0.4);
   }
   100% {
     box-shadow: none;
     border-color: rgba(63, 63, 70, 0.8);
   }
+}
+
+/* Styled select options */
+select option {
+  background-color: #ffffff;
+  color: #18181b;
+  padding: 6px 10px;
+}
+.dark select option {
+  background-color: #18181b;
+  color: #f4f4f5;
 }

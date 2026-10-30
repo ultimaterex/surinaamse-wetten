@@ -214,7 +214,7 @@ function renderHomeLawsGrid(laws) {
       >
         <div class="flex items-start justify-between gap-3">
           <div class="space-y-1 flex-1">
-            <h3 class="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            <h3 class="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-950 dark:group-hover:text-white transition-colors">
               ${escapeHtml(l.name)}
             </h3>
             <p class="text-xs text-zinc-400 dark:text-zinc-500 font-mono">${escapeHtml(l.slug)}</p>
@@ -328,7 +328,7 @@ function renderLawReaderPage(data, pageNum) {
     el.readerTocLinks.innerHTML = tocItems.map(item => `
       <a 
         href="#/law/${meta.slug}/${item.id}" 
-        class="block py-1 hover:text-amber-600 dark:hover:text-amber-400 truncate transition-colors ${item.type === 'book' ? 'font-bold pl-0 text-zinc-900 dark:text-zinc-200' : 'pl-3 text-zinc-600 dark:text-zinc-400'}"
+        class="block py-1 hover:text-zinc-950 dark:hover:text-white truncate transition-colors ${item.type === 'book' ? 'font-bold pl-0 text-zinc-900 dark:text-zinc-200' : 'pl-3 text-zinc-600 dark:text-zinc-400'}"
       >
         ${escapeHtml(item.name)}
       </a>
@@ -420,7 +420,7 @@ function renderLawReaderPage(data, pageNum) {
       >
         <div class="flex items-center justify-between gap-3 pb-3 border-b border-zinc-100 dark:border-zinc-800">
           <div class="flex items-center gap-2">
-            <span class="text-xs font-mono font-bold text-amber-500 dark:text-amber-400">§</span>
+            <span class="text-xs font-mono font-bold text-zinc-400 dark:text-zinc-500">§</span>
             <h4 class="text-base font-bold text-zinc-900 dark:text-white tracking-tight">${escapeHtml(art.title)}</h4>
           </div>
           
@@ -476,7 +476,7 @@ function formatLegalText(rawText) {
   for (let i = 0; i < paragraphs.length; i++) {
     let clean = escapeHtml(paragraphs[i].trim());
     clean = clean.replace(REGEX_LIST_DASH, '<br/>&bull; ');
-    clean = clean.replace(REGEX_LIST_NUMS, '<span class="legal-subclause"><span class="font-semibold text-amber-600 dark:text-amber-400">$1</span> ');
+    clean = clean.replace(REGEX_LIST_NUMS, '<span class="legal-subclause"><span class="font-semibold text-zinc-900 dark:text-zinc-100">$1</span> ');
     out.push(`<p class="mb-3">${clean}</p>`);
   }
   return out.join('');
@@ -566,12 +566,12 @@ function executeSearch(query) {
     return `
       <div class="p-5 bg-white dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800 rounded-xl hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-md transition-all duration-200 space-y-2 shadow-sm">
         <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
-          <span class="font-semibold text-amber-600 dark:text-amber-400">${escapeHtml(res.law_name)}</span>
+          <span class="font-semibold text-zinc-900 dark:text-zinc-100">${escapeHtml(res.law_name)}</span>
           <span class="text-zinc-400 dark:text-zinc-500 font-mono text-[11px]">${escapeHtml(res.chapter || '')}</span>
         </div>
 
         <h3 class="text-base font-bold text-zinc-900 dark:text-white">
-          <a href="#/law/${res.law_slug}/art-${res.id}" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+          <a href="#/law/${res.law_slug}/art-${res.id}" class="hover:text-zinc-950 dark:hover:text-white transition-colors">
             ${escapeHtml(res.title)}
           </a>
         </h3>
@@ -581,7 +581,7 @@ function executeSearch(query) {
         </div>
 
         <div class="pt-1 flex items-center justify-end">
-          <a href="#/law/${res.law_slug}/art-${res.id}" class="text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline inline-flex items-center gap-1">
+          <a href="#/law/${res.law_slug}/art-${res.id}" class="text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline inline-flex items-center gap-1">
             Read in context <span class="inline-flex">${ICONS.arrowRight}</span>
           </a>
         </div>
