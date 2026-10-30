@@ -1,7 +1,11 @@
 {
   "name": "surinaamse-wetten",
   "version": "1.0.0",
-  "private": true,
+  "description": "Statutory Laws of Suriname digital reader and Model Context Protocol (MCP) server",
+  "bin": {
+    "surinaamse-wetten": "./mcp/index.js",
+    "surinaamse-wetten-mcp": "./mcp/index.js"
+  },
   "scripts": {
     "build:css": "tailwindcss -i src-css/input.css -o docs/style.css --minify",
     "watch:css": "tailwindcss -i src-css/input.css -o docs/style.css --watch"

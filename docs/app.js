@@ -806,8 +806,8 @@ function setupEventListeners() {
       const config = JSON.stringify({
         mcpServers: {
           "surinaamse-wetten": {
-            command: "node",
-            args: ["<path-to-repo>/mcp/index.js"]
+            command: "npx",
+            args: ["-y", "github:ultimaterex/surinaamse-wetten"]
           }
         }
       }, null, 2);

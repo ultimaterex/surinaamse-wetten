@@ -22,8 +22,8 @@ Add to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "surinaamse-wetten": {
-      "command": "node",
-      "args": ["<path-to-repo>/mcp/index.js"]
+      "command": "npx",
+      "args": ["-y", "github:ultimaterex/surinaamse-wetten"]
     }
   }
 }
@@ -31,9 +31,8 @@ Add to your `claude_desktop_config.json`:
 
 ### Cursor / Antigravity
 Add as a stdio MCP server:
-- **Command**: `node`
-- **Args**: `mcp/index.js`
-- **Working Directory**: `<repo-root>`
+- **Command**: `npx`
+- **Args**: `-y github:ultimaterex/surinaamse-wetten`
 
 ### Zero Dependencies
 Runs on vanilla Node.js 18+ with zero `npm install` required.

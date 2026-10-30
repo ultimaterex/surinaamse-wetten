@@ -32,8 +32,8 @@ Add to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "surinaamse-wetten": {
-      "command": "node",
-      "args": ["<path-to-repo>/mcp/index.js"]
+      "command": "npx",
+      "args": ["-y", "github:ultimaterex/surinaamse-wetten"]
     }
   }
 }

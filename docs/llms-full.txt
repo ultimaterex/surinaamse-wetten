@@ -54,8 +54,8 @@ Run the Suriname Law MCP server directly in Claude Desktop, Cursor, or Antigravi
 {
   "mcpServers": {
     "surinaamse-wetten": {
-      "command": "node",
-      "args": ["./mcp/index.js"]
+      "command": "npx",
+      "args": ["-y", "github:ultimaterex/surinaamse-wetten"]
     }
   }
 }
