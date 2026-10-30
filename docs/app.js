@@ -104,8 +104,21 @@ function initTheme() {
 }
 
 function toggleTheme() {
+  // Prevent CSS transition thrashing and jank during theme switch
+  const css = document.createElement('style');
+  css.appendChild(
+    document.createTextNode(
+      '*, *::before, *::after { -webkit-transition: none !important; -moz-transition: none !important; -o-transition: none !important; -ms-transition: none !important; transition: none !important; }'
+    )
+  );
+  document.head.appendChild(css);
+
   const isDark = document.documentElement.classList.toggle('dark');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+  // Force reflow and remove style tag so hover states continue working normally
+  window.getComputedStyle(css).opacity;
+  document.head.removeChild(css);
 }
 
 // -------------------------------------------------------------
