@@ -1,5 +1,11 @@
-# Raw API cache (can be regenerated with scrape_wetten.py)
+# Raw API cache
 .cache/
+
+# Databases & raw scrap outputs (audit trail is kept in private engine)
+output/
+*.db
+*.sqlite
+*.sqlite3
 
 # Python cache & virtual environments
 __pycache__/
@@ -9,7 +15,7 @@ __pycache__/
 venv/
 env/
 
-# Astro & Node build artifacts
+# Node build artifacts
 node_modules/
 dist/
 .astro/

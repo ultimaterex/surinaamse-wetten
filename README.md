@@ -2,59 +2,47 @@
 
 > 🌐 **Live Web Reader & Instant Search**: **[https://ultimaterex.github.io/surinaamse-wetten/](https://ultimaterex.github.io/surinaamse-wetten/)**
 
-A fast, modern digital reader, full-text search engine, and structured statutory corpus for the laws and regulations of the Republic of Suriname.
+A fast, modern digital reader, full-text search engine, and structured statutory corpus for the statutory laws and regulations of the Republic of Suriname.
 
 ---
 
 ## Overview
 
-**Surinaamse Wetten** provides an open-access digital reader and developer-ready datasets covering Suriname's complete statutory legislation—from the Civil Code (*Burgerlijk Wetboek*) to labor acts, mining decrees, and procedural law.
+**Surinaamse Wetten** provides an open-access digital reader and clean statutory datasets covering Suriname's complete statutory legislation—from the Civil Code (*Burgerlijk Wetboek*) to labor acts, mining decrees, and procedural law.
 
 ### Key Capabilities
 
 - **Sub-Millisecond Search**: 100% client-side full-text search across all statutory provisions using an in-memory inverted index (`MiniSearch`).
 - **Structured Statutory Hierarchy**: Preserves the complete legal structure (Books, Chapters, Titles, Sections, and Articles).
 - **Deep Linking & Citation**: Direct URL anchors (`#/law/<slug>/art-<id>`) with one-click legal citation copy tools.
-- **Multiple Developer Formats**: Available as an SQLite database (with FTS5 search), clean Markdown files, and normalized JSON.
+- **Raw Markdown Corpus**: Clean, normalized Markdown files for offline reading, full-text analysis, and LLM / RAG embeddings.
 
 ---
 
 ## Repository Structure
 
 ```
-├── docs/                       # GitHub Pages single-page web application
-│   ├── index.html              # Modern dark-mode web reader interface
+├── docs/                       # Web application & GitHub Pages deployment
+│   ├── index.html              # Modern web reader interface
 │   ├── app.js                  # Fast client-side router & search engine
-│   ├── style.css               # Legal typography & custom styles
+│   ├── style.css               # Legal typography & custom compiled styles
 │   └── data/                   # Search indexes and per-law JSON documents
 │
-├── output/                     # Complete offline datasets
-│   ├── wetten.db               # SQLite database with FTS5 full-text search
-│   ├── json/                   # Structured JSON files (by law + consolidated)
-│   └── markdown/               # Formatted Markdown documents per law
+├── markdown/                   # Complete raw Markdown statutory corpus
+│   ├── README.md               # Catalog of all 41 laws with article counts
+│   └── laws/                   # 41 clean individual Markdown law files
 │
-└── query_wetten.py             # Terminal CLI lookup & search tool
+└── package.json                # CSS build tooling
 ```
 
 ---
 
-## Command-Line Search Tool
+## Raw Markdown Corpus
 
-The included `query_wetten.py` tool lets you query the entire statutory database directly from your terminal:
-
-```bash
-# Full-text search across all legislation
-python query_wetten.py "arbeidsovereenkomst"
-
-# Search within a specific law
-python query_wetten.py "ontslag" --law "arbeidswet-1963"
-
-# View a specific article by ID
-python query_wetten.py --id 19320
-
-# List all available laws
-python query_wetten.py --list-laws
-```
+The complete legislation is available in the [`markdown/laws`](./markdown/laws) folder. Each file includes full statutory headings and provisions, ready for:
+- Direct offline reading in any Markdown reader
+- Local `grep`, `ripgrep`, or full-text indexing
+- Document ingestion for RAG and semantic search pipelines
 
 ---
 
