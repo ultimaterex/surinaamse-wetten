@@ -128,3 +128,24 @@ select option {
   background-color: #18181b;
   color: #f4f4f5;
 }
+
+
+/* Bulletproof Form Controls */
+select, input, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none !important;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus, select:focus-visible {
+  outline: none !important;
+}

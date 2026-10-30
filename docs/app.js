@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // -------------------------------------------------------------
 function initTheme() {
   const stored = localStorage.getItem('theme');
-  if (stored === 'light') {
+  if (stored === 'light' || (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
     document.documentElement.classList.remove('dark');
   } else {
     document.documentElement.classList.add('dark');
@@ -174,7 +174,7 @@ function renderSidebarLaws(laws, filterText = '') {
     : laws;
 
   if (filtered.length === 0) {
-    el.lawsList.innerHTML = `<div class="p-4 text-xs text-slate-500 text-center">No laws match your filter.</div>`;
+    el.lawsList.innerHTML = `<div class="p-4 text-xs text-zinc-500 dark:text-zinc-400 text-center">No laws match your filter.</div>`;
     return;
   }
 
@@ -328,13 +328,18 @@ function renderLawReaderPage(data, pageNum) {
     el.readerTocLinks.innerHTML = tocItems.map(item => `
       <a 
         href="#/law/${meta.slug}/${item.id}" 
-        class="block py-1 hover:text-zinc-950 dark:hover:text-white truncate transition-colors ${item.type === 'book' ? 'font-bold pl-0 text-zinc-900 dark:text-zinc-200' : 'pl-3 text-zinc-600 dark:text-zinc-400'}"
+        class="block px-2.5 py-1.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white truncate transition-colors ${item.type === 'book' ? 'font-bold pl-2.5 text-zinc-900 dark:text-zinc-100' : 'pl-5 text-zinc-600 dark:text-zinc-400'}"
       >
         ${escapeHtml(item.name)}
       </a>
     `).join('');
+    el.readerTocLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        el.readerTocDrawer.classList.add('hidden');
+      });
+    });
   } else {
-    el.readerTocLinks.innerHTML = `<div class="p-2 text-slate-500">Sequential articles without sub-chapters.</div>`;
+    el.readerTocLinks.innerHTML = `<div class="p-3 text-xs text-zinc-500 dark:text-zinc-400">Sequential articles without sub-chapters.</div>`;
   }
 
   // Calculate slice
@@ -377,9 +382,9 @@ function renderLawReaderPage(data, pageNum) {
 
     if (art.book_name && art.book_name !== lastBook) {
       htmlChunks.push(`
-        <div class="pt-6 pb-2 border-b border-slate-700">
-          <span class="text-xs uppercase font-bold tracking-wider text-indigo-400">Book</span>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-white mt-0.5">${escapeHtml(art.book_name)}</h2>
+        <div class="pt-6 pb-2 border-b border-zinc-200 dark:border-zinc-800">
+          <span class="text-xs uppercase font-bold tracking-wider text-zinc-400 dark:text-zinc-500">Book</span>
+          <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 mt-0.5">${escapeHtml(art.book_name)}</h2>
         </div>
       `);
       lastBook = art.book_name;
@@ -388,8 +393,8 @@ function renderLawReaderPage(data, pageNum) {
     if (art.chapter_name && art.chapter_name !== lastChapter) {
       htmlChunks.push(`
         <div class="pt-4 pb-1">
-          <span class="text-[11px] uppercase font-semibold tracking-wider text-slate-500">Chapter</span>
-          <h3 class="text-base font-bold text-slate-800 dark:text-slate-200">${escapeHtml(art.chapter_name)}</h3>
+          <span class="text-[11px] uppercase font-semibold tracking-wider text-zinc-400 dark:text-zinc-500">Chapter</span>
+          <h3 class="text-base font-bold text-zinc-800 dark:text-zinc-200">${escapeHtml(art.chapter_name)}</h3>
         </div>
       `);
       lastChapter = art.chapter_name;
@@ -397,14 +402,14 @@ function renderLawReaderPage(data, pageNum) {
 
     if (art.title_name && art.title_name !== lastTitle) {
       htmlChunks.push(`
-        <h4 class="text-sm font-semibold text-slate-300 italic pt-2">${escapeHtml(art.title_name)}</h4>
+        <h4 class="text-sm font-semibold text-zinc-600 dark:text-zinc-400 italic pt-2">${escapeHtml(art.title_name)}</h4>
       `);
       lastTitle = art.title_name;
     }
 
     if (art.afdeling_name && art.afdeling_name !== lastSection) {
       htmlChunks.push(`
-        <h5 class="text-xs font-semibold text-slate-400 uppercase pt-2 tracking-wide">${escapeHtml(art.afdeling_name)}</h5>
+        <h5 class="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase pt-2 tracking-wide">${escapeHtml(art.afdeling_name)}</h5>
       `);
       lastSection = art.afdeling_name;
     }
@@ -537,7 +542,7 @@ async function openSearch(query) {
 
 function executeSearch(query) {
   if (!state.miniSearch || !query.trim()) {
-    el.searchResultsList.innerHTML = `<div class="p-8 text-center text-slate-500">Enter a search query above.</div>`;
+    el.searchResultsList.innerHTML = `<div class="p-8 text-center text-zinc-400 dark:text-zinc-500">Enter a search query above.</div>`;
     return;
   }
 
@@ -551,9 +556,9 @@ function executeSearch(query) {
 
   if (displayResults.length === 0) {
     el.searchResultsList.innerHTML = `
-      <div class="p-12 text-center bg-[#111827] rounded-xl border border-slate-800 space-y-2">
-        <h3 class="text-sm font-semibold text-slate-300">No matching legal provisions found</h3>
-        <p class="text-xs text-slate-500">Try adjusting your query terms or clear the law filter.</p>
+      <div class="p-12 text-center bg-white dark:bg-[#18181b] rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-2 shadow-xs">
+        <h3 class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">No matching legal provisions found</h3>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400">Try adjusting your query terms or clear the law filter.</p>
       </div>
     `;
     return;
