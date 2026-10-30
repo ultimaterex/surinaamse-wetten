@@ -1,0 +1,126 @@
+/* Custom styles for Surinaamse Wetten (Starlight) */
+
+:root {
+  --sl-font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sl-font: var(--sl-font-system);
+}
+
+:root[data-theme='dark'] {
+  /* Deep Obsidian Palette */
+  --sl-color-bg: #0b0f17;
+  --sl-color-bg-nav: #0d121c;
+  --sl-color-bg-sidebar: #090c13;
+  --sl-color-bg-inline-code: #161f30;
+  
+  --sl-color-hairline: #1e2638;
+  --sl-color-hairline-light: #28354d;
+  
+  /* Text shades */
+  --sl-color-white: #f8fafc;
+  --sl-color-gray-1: #e2e8f0;
+  --sl-color-gray-2: #cbd5e1;
+  --sl-color-gray-3: #94a3b8;
+  --sl-color-gray-4: #64748b;
+  --sl-color-gray-5: #334155;
+  --sl-color-gray-6: #1e293b;
+  --sl-color-black: #05080e;
+
+  /* Accent: Legal Warm Amber / Gold */
+  --sl-color-accent-low: #2b1f09;
+  --sl-color-accent: #f59e0b;
+  --sl-color-accent-high: #fcd34d;
+}
+
+:root[data-theme='light'] {
+  --sl-color-bg: #fafbfc;
+  --sl-color-hairline: #e2e8f0;
+  --sl-color-accent-low: #fef3c7;
+  --sl-color-accent: #d97706;
+  --sl-color-accent-high: #92400e;
+}
+
+/* Legal text styling */
+.sl-markdown-content {
+  line-height: 1.75;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+/* Article headings & section dividers */
+.sl-markdown-content h1 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  border-bottom: 2px solid var(--sl-color-hairline);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.sl-markdown-content h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+.sl-markdown-content h3 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: var(--sl-color-accent-high);
+}
+
+/* Law articles definition styling */
+.sl-markdown-content blockquote {
+  border-inline-start-color: var(--sl-color-accent);
+  background-color: var(--sl-color-accent-low);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: normal;
+}
+
+/* Tables in statutes */
+.sl-markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sl-markdown-content th {
+  background-color: var(--sl-color-hairline);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.sl-markdown-content td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+.sl-markdown-content tr:last-child td {
+  border-bottom: none;
+}
+
+/* Refined Sidebar */
+nav.sidebar {
+  border-inline-end: 1px solid var(--sl-color-hairline);
+}
+
+.sidebar-content a[aria-current="page"] {
+  font-weight: 600;
+  color: var(--sl-color-accent);
+}
+
+/* Search bar styling */
+button.search-button {
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+button.search-button:hover {
+  border-color: var(--sl-color-accent);
+}
