@@ -1,0 +1,21 @@
+{
+  "name": "surinaamse-wetten-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for Suriname statutory legislation and civil codes",
+  "main": "index.js",
+  "bin": {
+    "surinaamse-wetten-mcp": "./index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "suriname",
+    "law",
+    "legal",
+    "legislation",
+    "claude",
+    "cursor"
+  ],
+  "author": "Selby Baidjnath <selby@serubii.com>",
+  "license": "MIT"
+}

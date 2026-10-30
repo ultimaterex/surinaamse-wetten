@@ -458,6 +458,17 @@ function renderLawReaderPage(data, pageNum) {
             >
               ${ICONS.copy}
             </button>
+            <button 
+              class="copy-ai-btn p-1.5 text-zinc-400 hover:text-amber-500 dark:hover:text-amber-400 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-95" 
+              title="Copy formatted context for AI & LLMs"
+              data-title="${escapeHtml(art.title)}"
+              data-law="${escapeHtml(meta.name)}"
+              data-cite="${escapeHtml(`${art.title}, ${meta.name} (Suriname)`)}"
+              data-url="https://ultimaterex.github.io/surinaamse-wetten/#/law/${meta.slug}/art-${art.id}"
+              data-text="${encodeURIComponent(art.text)}"
+            >
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+            </button>
           </div>
         </div>
 
@@ -518,6 +529,21 @@ function attachArticleActions() {
       const cite = decodeURIComponent(btn.getAttribute('data-cite'));
       navigator.clipboard.writeText(`${cite}\n\n${text}`);
       showToast('Article text & citation copied');
+    });
+  });
+
+  document.querySelectorAll('.copy-ai-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const title = btn.getAttribute('data-title');
+      const law = btn.getAttribute('data-law');
+      const cite = btn.getAttribute('data-cite');
+      const url = btn.getAttribute('data-url');
+      const text = decodeURIComponent(btn.getAttribute('data-text'));
+
+      const aiPromptContext = `### [Suriname Statute Reference]\n- **Provision:** ${title}\n- **Legislation:** ${law}\n- **Citation:** ${cite}\n- **Direct Link:** ${url}\n\n\`\`\`text\n${text}\n\`\`\``;
+      navigator.clipboard.writeText(aiPromptContext);
+      showToast('Copied formatted AI prompt context');
     });
   });
 }
@@ -754,6 +780,41 @@ function setupEventListeners() {
   el.nextBtnTop.addEventListener('click', () => changePage(1));
   el.prevBtnBottom.addEventListener('click', () => changePage(-1));
   el.nextBtnBottom.addEventListener('click', () => changePage(1));
+
+    // MCP Modal Listeners
+  const mcpBtn = document.getElementById('mcp-modal-btn');
+  const mcpModal = document.getElementById('mcp-modal');
+  const mcpClose = document.getElementById('mcp-modal-close');
+  const copyConfigBtn = document.getElementById('copy-mcp-config-btn');
+
+  if (mcpBtn && mcpModal) {
+    mcpBtn.addEventListener('click', () => {
+      mcpModal.classList.remove('hidden');
+    });
+    if (mcpClose) {
+      mcpClose.addEventListener('click', () => {
+        mcpModal.classList.add('hidden');
+      });
+    }
+    mcpModal.addEventListener('click', (e) => {
+      if (e.target === mcpModal) mcpModal.classList.add('hidden');
+    });
+  }
+
+  if (copyConfigBtn) {
+    copyConfigBtn.addEventListener('click', () => {
+      const config = JSON.stringify({
+        mcpServers: {
+          "surinaamse-wetten": {
+            command: "node",
+            args: ["<path-to-repo>/mcp/index.js"]
+          }
+        }
+      }, null, 2);
+      navigator.clipboard.writeText(config);
+      showToast('MCP configuration copied');
+    });
+  }
 
   el.mobileMenuBtn.addEventListener('click', toggleSidebar);
   el.sidebarOverlay.addEventListener('click', closeSidebar);

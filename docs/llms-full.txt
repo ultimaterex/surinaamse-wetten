@@ -1,0 +1,74 @@
+# Surinaamse Wetten (Statutory Legislation of Suriname)
+
+> Fast, open-access, client-side digital reader and structured statutory corpus for the statutory laws, civil codes, labor acts, and regulations of the Republic of Suriname.
+> Web Reader: https://ultimaterex.github.io/surinaamse-wetten/
+> GitHub: https://github.com/ultimaterex/surinaamse-wetten
+> Maintainer: Selby Baidjnath (https://serubii.com)
+
+## Core Legislation Catalog (41 Laws, 5,037 Provisions)
+- [Advocatenwet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/advocatenwet.md): 65 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/advocatenwet
+- [Agrarische Wet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/agrarische-wet.md): 15 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/agrarische-wet
+- [Arbeidsbemiddelingswet 2017](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/arbeidsbemiddelingswet-2017.md): 31 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/arbeidsbemiddelingswet-2017
+- [Arbeidsgeschillenwet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/arbeidsgeschillenwet.md): 55 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/arbeidsgeschillenwet
+- [Arbeidswet 1963](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/arbeidswet-1963.md): 40 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/arbeidswet-1963
+- [Bouwwet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/bouwwet.md): 12 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/bouwwet
+- [Burgerlijk Wetboek](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/burgerlijk-wetboek.md): 2417 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/burgerlijk-wetboek
+- [Decreet Mijnbouw](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/decreet-mijnbouw.md): 77 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/decreet-mijnbouw
+- [Faillissementswet 1935](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/faillissementswet-1935.md): 278 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/faillissementswet-1935
+- [Huurwet Woonruimte 2020](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/huurwet-woonruimte-2020.md): 29 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/huurwet-woonruimte-2020
+- [Landsverordening Belemmeringen Privaatrecht 1963](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/landsverordening-belemmeringen-privaatrecht-1963.md): 20 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/landsverordening-belemmeringen-privaatrecht-1963
+- [Milieu Raamwet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/milieu-raamwet.md): 77 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/milieu-raamwet
+- [Onteigeningswet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/onteigeningswet.md): 60 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/onteigeningswet
+- [Personeelswet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/personeelswet.md): 97 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/personeelswet
+- [Petroleumwet 1990](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/petroleumwet-1990.md): 31 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/petroleumwet-1990
+- [Stedebouwkundige Wet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/stedebouwkundige-wet.md): 24 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/stedebouwkundige-wet
+- [Vacantiewet 1975](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/vacantiewet-1975.md): 21 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/vacantiewet-1975
+- [Veiligheidswet](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/veiligheidswet.md): 16 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/veiligheidswet
+- [Wet Algemeen Oudedagsvoorzieningsfonds](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-algemeen-oudedagsvoorzieningsfonds.md): 25 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-algemeen-oudedagsvoorzieningsfonds
+- [Wet Algemeen Pensioen 2014](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-algemeen-pensioen-2014.md): 25 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-algemeen-pensioen-2014
+- [Wet Bosbeheer](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-bosbeheer.md): 62 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-bosbeheer
+- [Wet Grondregistratie en Land Informatie Systeem](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-grondregistratie-en-land-informatie-systeem.md): 138 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-grondregistratie-en-land-informatie-systeem
+- [Wet Huurkoop Onroerend Goed](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-huurkoop-onroerend-goed.md): 26 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-huurkoop-onroerend-goed
+- [Wet Industrieëlen Eigendom](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-industrieelen-eigendom.md): 28 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-industrieelen-eigendom
+- [Wet Minimumloon](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-minimumloon.md): 10 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-minimumloon
+- [Wet Nationale Basiszorgverzekering](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-nationale-basiszorgverzekering.md): 22 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-nationale-basiszorgverzekering
+- [Wet Notarisambt 2019](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-notarisambt-2019.md): 110 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-notarisambt-2019
+- [Wet Omzetting Arbeidsovereenkomst voor Bepaalde Tijd in Arbeidsovereenkomst Onbepaalde Tijd](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-omzetting-arbeidsovereenkomst-voor-bepaalde-tijd-in-arbeidsovereenkomst-onbepaalde-tijd.md): 12 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-omzetting-arbeidsovereenkomst-voor-bepaalde-tijd-in-arbeidsovereenkomst-onbepaalde-tijd
+- [Wet Onteigening Stedebouwkundige ontwikkeling en Woningvoorziening](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-onteigening-stedebouwkundige-ontwikkeling-en-woningvoorziening.md): 14 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-onteigening-stedebouwkundige-ontwikkeling-en-woningvoorziening
+- [Wet Ontslagvergunning](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-ontslagvergunning.md): 11 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-ontslagvergunning
+- [Wet Opvanginstellingen](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-opvanginstellingen.md): 19 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-opvanginstellingen
+- [Wet Pensioenfondsen en Voorzieningsfondsen](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-pensioenfondsen-en-voorzieningsfondsen.md): 48 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-pensioenfondsen-en-voorzieningsfondsen
+- [Wet Suriname Chartered Accountants Institute](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-suriname-chartered-accountants-institute.md): 63 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-suriname-chartered-accountants-institute
+- [Wet Ter Beschikking Stellen Arbeidskrachten door Intermediairs](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-ter-beschikking-stellen-arbeidskrachten-door-intermediairs.md): 22 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-ter-beschikking-stellen-arbeidskrachten-door-intermediairs
+- [Wet Vrijheid Vakvereniging](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-vrijheid-vakvereniging.md): 23 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-vrijheid-vakvereniging
+- [Wet Werkvergunning Vreemdelingen](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-werkvergunning-vreemdelingen.md): 17 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-werkvergunning-vreemdelingen
+- [Wet aansprakelijkheidsverzekering motorrijtuigen](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-aansprakelijkheidsverzekering-motorrijtuigen.md): 51 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-aansprakelijkheidsverzekering-motorrijtuigen
+- [Wet auteursrecht 1913](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-auteursrecht-1913.md): 68 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-auteursrecht-1913
+- [Wet op het Testamenten register](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-op-het-testamenten-register.md): 8 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-op-het-testamenten-register
+- [Wet rechtstoestand vóór 1 juli 1982 uitgegeven gronden](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wet-rechtstoestand-voor-1-juli-1982-uitgegeven-gronden.md): 10 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wet-rechtstoestand-voor-1-juli-1982-uitgegeven-gronden
+- [Wetboek van Burgerlijke Rechtsvordering](https://raw.githubusercontent.com/ultimaterex/surinaamse-wetten/main/markdown/laws/wetboek-van-burgerlijke-rechtsvordering.md): 838 articles. Web reader: https://ultimaterex.github.io/surinaamse-wetten/#/law/wetboek-van-burgerlijke-rechtsvordering
+
+## Model Context Protocol (MCP) Server
+Run the Suriname Law MCP server directly in Claude Desktop, Cursor, or Antigravity to perform live semantic lookups:
+```json
+{
+  "mcpServers": {
+    "surinaamse-wetten": {
+      "command": "node",
+      "args": ["./mcp/index.js"]
+    }
+  }
+}
+```
+
+## Citation Standard
+When citing provisions under Suriname law, use:
+- Format: `Art. [Number] [Abbreviation] (Suriname)`
+- Example: `Art. 1613x BW (Suriname)`
+
+## Full Topic Index
+- **Civil Code & Obligations**: Burgerlijk Wetboek (Civil Code), Wetboek van Burgerlijke Rechtsvordering, Faillissementswet.
+- **Employment & Labor**: Arbeidswet 1963, Arbeidsgeschillenwet, Wet Ontslagvergunning, Wet Minimumloon, Vacantiewet 1975, Wet Omzetting Arbeidsovereenkomst, Arbeidsbemiddelingswet 2017.
+- **Property & Real Estate**: Agrarische Wet, Wet Grondregistratie en Land Informatie Systeem (GLIS), Huurwet Woonruimte 2020, Wet Huurkoop Onroerend Goed, Onteigeningswet.
+- **Natural Resources & Industry**: Decreet Mijnbouw, Petroleumwet 1990, Wet Bosbeheer, Milieu Raamwet, Wet Industrieelen Eigendom.
+- **Social Security & Professions**: Advocatenwet, Wet Notarisambt 2019, Wet Algemeen Oudedagsvoorzieningsfonds (AOV), Wet Algemeen Pensioen 2014, Wet Nationale Basiszorgverzekering.
