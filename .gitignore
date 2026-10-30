@@ -1,0 +1,10 @@
+# Raw API cache (can be regenerated with scrape_wetten.py)
+.cache/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
