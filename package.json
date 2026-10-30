@@ -1,15 +1,12 @@
 {
   "name": "surinaamse-wetten",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build:css": "tailwindcss -i src-css/input.css -o docs/style.css --minify",
+    "watch:css": "tailwindcss -i src-css/input.css -o docs/style.css --watch"
   },
-  "dependencies": {
-    "@astrojs/starlight": "^0.32.0",
-    "astro": "^5.4.0",
-    "sharp": "^0.33.5"
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
   }
 }
