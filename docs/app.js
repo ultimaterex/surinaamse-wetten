@@ -185,16 +185,16 @@ function renderSidebarLaws(laws, filterText = '') {
         href="#/law/${l.slug}" 
         class="law-nav-item block px-3 py-2 rounded-lg text-xs transition-colors flex items-center justify-between group ${
           isActive 
-            ? 'bg-indigo-950/80 text-indigo-300 border border-indigo-800/60 font-semibold' 
-            : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            ? 'bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 font-semibold' 
+            : 'text-slate-700 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60'
         }"
         data-slug="${l.slug}"
       >
         <span class="truncate pr-2">${escapeHtml(l.name)}</span>
-        <span class="text-[10px] px-1.5 py-0.5 rounded-full shrink-0 ${
+        <span class="text-[10px] px-1.5 py-0.5 rounded-full shrink-0 font-medium ${
           isActive 
-            ? 'bg-indigo-800 text-indigo-200' 
-            : 'bg-slate-800/80 text-slate-500 group-hover:text-slate-300'
+            ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-700 dark:text-indigo-200' 
+            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-indigo-50 group-hover:text-indigo-700 dark:group-hover:bg-slate-700 dark:group-hover:text-slate-300'
         }">
           ${l.article_count}
         </span>
@@ -329,7 +329,7 @@ function renderLawReaderPage(data, pageNum) {
     el.readerTocLinks.innerHTML = tocItems.map(item => `
       <a 
         href="#/law/${meta.slug}/${item.id}" 
-        class="block py-1 hover:text-indigo-400 truncate transition-colors ${item.type === 'book' ? 'font-bold pl-0 text-slate-200' : 'pl-3 text-slate-400'}"
+        class="block py-1 hover:text-indigo-600 dark:hover:text-indigo-400 truncate transition-colors ${item.type === 'book' ? 'font-bold pl-0 text-slate-900 dark:text-slate-200' : 'pl-3 text-slate-600 dark:text-slate-400'}"
       >
         ${escapeHtml(item.name)}
       </a>
