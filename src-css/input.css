@@ -1,25 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Lora', Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-heading: 'Cinzel', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* High-Readability Legal Typography */
 .legal-text {
-  font-family: var(--font-serif);
-  line-height: 1.85;
-  font-size: 1.0625rem;
+  font-family: var(--font-sans);
+  line-height: 1.8;
+  font-size: 0.975rem; /* 15.6px - optimal for statute reading */
+  letter-spacing: -0.011em;
+}
+
+.legal-text p {
+  margin-bottom: 0.85rem;
+}
+
+.legal-subclause {
+  display: block;
+  padding-left: 1.25rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.75;
 }
 
 /* Custom scrollbars */

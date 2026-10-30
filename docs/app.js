@@ -210,20 +210,20 @@ function renderHomeLawsGrid(laws) {
     return `
       <a 
         href="#/law/${l.slug}" 
-        class="group block p-5 bg-[#111827] border border-slate-800/80 rounded-xl hover:border-indigo-500/80 hover:bg-[#151e32] transition-all shadow-sm"
+        class="group block p-5 bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800/80 rounded-xl hover:border-indigo-500/80 hover:bg-slate-50 dark:hover:bg-[#151e32] transition-all shadow-sm"
       >
         <div class="flex items-start justify-between gap-3">
           <div class="space-y-1 flex-1">
-            <h3 class="text-sm font-bold text-slate-200 group-hover:text-indigo-400 transition-colors">
+            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
               ${escapeHtml(l.name)}
             </h3>
-            <p class="text-xs text-slate-500 font-mono">${escapeHtml(l.slug)}</p>
+            <p class="text-xs text-slate-400 dark:text-slate-500 font-mono">${escapeHtml(l.slug)}</p>
           </div>
-          <span class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-indigo-950 border border-indigo-800/60 text-indigo-300 shrink-0">
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800/60 text-indigo-700 dark:text-indigo-300 shrink-0">
             ${l.article_count} arts
           </span>
         </div>
-        <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500 group-hover:text-slate-300">
+        <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-slate-300">
           <span>Read legislation</span>
           <span class="group-hover:translate-x-1 transition-transform inline-flex">${ICONS.arrowRight}</span>
         </div>
@@ -380,7 +380,7 @@ function renderLawReaderPage(data, pageNum) {
       htmlChunks.push(`
         <div class="pt-6 pb-2 border-b border-slate-700">
           <span class="text-xs uppercase font-bold tracking-wider text-indigo-400">Book</span>
-          <h2 class="text-xl font-bold text-white mt-0.5">${escapeHtml(art.book_name)}</h2>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white mt-0.5">${escapeHtml(art.book_name)}</h2>
         </div>
       `);
       lastBook = art.book_name;
@@ -390,7 +390,7 @@ function renderLawReaderPage(data, pageNum) {
       htmlChunks.push(`
         <div class="pt-4 pb-1">
           <span class="text-[11px] uppercase font-semibold tracking-wider text-slate-500">Chapter</span>
-          <h3 class="text-base font-bold text-slate-200">${escapeHtml(art.chapter_name)}</h3>
+          <h3 class="text-base font-bold text-slate-800 dark:text-slate-200">${escapeHtml(art.chapter_name)}</h3>
         </div>
       `);
       lastChapter = art.chapter_name;
@@ -412,29 +412,29 @@ function renderLawReaderPage(data, pageNum) {
 
     const formattedText = formatLegalText(art.text);
 
-    // Article Card with instant inline SVGs
+    // Article Card with crystal-clear Inter typography
     htmlChunks.push(`
       <article 
         id="art-${art.id}" 
-        class="article-card bg-[#111827] border border-slate-800/80 rounded-xl p-6 sm:p-7 shadow-sm transition-all"
+        class="article-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800/80 rounded-xl p-6 sm:p-7 shadow-sm transition-all"
         data-article-id="${art.id}"
       >
-        <div class="flex items-center justify-between gap-3 pb-3 border-b border-slate-800">
+        <div class="flex items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
           <div class="flex items-center gap-2">
-            <span class="text-xs font-mono font-bold text-indigo-400">§</span>
-            <h4 class="text-base font-bold text-white">${escapeHtml(art.title)}</h4>
+            <span class="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400">§</span>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">${escapeHtml(art.title)}</h4>
           </div>
           
           <div class="flex items-center gap-1">
             <button 
-              class="copy-link-btn p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors" 
+              class="copy-link-btn p-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" 
               title="Copy link to article"
               data-link="#/law/${meta.slug}/art-${art.id}"
             >
               ${ICONS.link}
             </button>
             <button 
-              class="copy-text-btn p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors" 
+              class="copy-text-btn p-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" 
               title="Copy text & citation"
               data-text="${encodeURIComponent(art.text)}"
               data-cite="${encodeURIComponent(`${art.title}, ${meta.name} (Suriname)`)}"
@@ -444,7 +444,7 @@ function renderLawReaderPage(data, pageNum) {
           </div>
         </div>
 
-        <div class="legal-text text-slate-200 pt-4 leading-relaxed">
+        <div class="legal-text text-slate-800 dark:text-slate-200 pt-4 leading-relaxed">
           ${formattedText}
         </div>
       </article>
@@ -470,14 +470,14 @@ const REGEX_LIST_DASH = /\n- /g;
 const REGEX_LIST_NUMS = /\n([0-9]+\.|\([a-z]\)|[a-z]\.)\s+/g;
 
 function formatLegalText(rawText) {
-  if (!rawText) return '<p class="italic text-slate-500">Geen tekst beschikbaar.</p>';
+  if (!rawText) return '<p class="italic text-slate-400 dark:text-slate-500">Geen tekst beschikbaar.</p>';
 
   const paragraphs = rawText.split(/\n{2,}/);
   const out = [];
   for (let i = 0; i < paragraphs.length; i++) {
     let clean = escapeHtml(paragraphs[i].trim());
     clean = clean.replace(REGEX_LIST_DASH, '<br/>&bull; ');
-    clean = clean.replace(REGEX_LIST_NUMS, '<br/><span class="font-semibold text-slate-100">$1</span> ');
+    clean = clean.replace(REGEX_LIST_NUMS, '<span class="legal-subclause"><span class="font-semibold text-indigo-600 dark:text-indigo-400">$1</span> ');
     out.push(`<p class="mb-3">${clean}</p>`);
   }
   return out.join('');
@@ -565,24 +565,24 @@ function executeSearch(query) {
   el.searchResultsList.innerHTML = displayResults.map(res => {
     const snippet = buildHighlightedSnippet(res.text, queryTerms);
     return `
-      <div class="p-5 bg-[#111827] border border-slate-800/80 rounded-xl hover:border-indigo-500/80 hover:bg-[#141d30] transition-all space-y-2 shadow-sm">
+      <div class="p-5 bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800/80 rounded-xl hover:border-indigo-500/80 hover:bg-slate-50 dark:hover:bg-[#141d30] transition-all space-y-2 shadow-sm">
         <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
-          <span class="font-semibold text-indigo-400">${escapeHtml(res.law_name)}</span>
-          <span class="text-slate-500 font-mono text-[11px]">${escapeHtml(res.chapter || '')}</span>
+          <span class="font-semibold text-indigo-600 dark:text-indigo-400">${escapeHtml(res.law_name)}</span>
+          <span class="text-slate-400 dark:text-slate-500 font-mono text-[11px]">${escapeHtml(res.chapter || '')}</span>
         </div>
 
-        <h3 class="text-base font-bold text-white">
-          <a href="#/law/${res.law_slug}/art-${res.id}" class="hover:text-indigo-400 transition-colors">
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">
+          <a href="#/law/${res.law_slug}/art-${res.id}" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
             ${escapeHtml(res.title)}
           </a>
         </h3>
 
-        <div class="text-xs text-slate-300 leading-relaxed font-serif bg-slate-900/60 p-3.5 rounded-lg border border-slate-800/60">
+        <div class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-sans bg-slate-50 dark:bg-slate-900/60 p-3.5 rounded-lg border border-slate-200 dark:border-slate-800/60">
           ${snippet}
         </div>
 
         <div class="pt-1 flex items-center justify-end">
-          <a href="#/law/${res.law_slug}/art-${res.id}" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1">
+          <a href="#/law/${res.law_slug}/art-${res.id}" class="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1">
             Read in context <span class="inline-flex">${ICONS.arrowRight}</span>
           </a>
         </div>
